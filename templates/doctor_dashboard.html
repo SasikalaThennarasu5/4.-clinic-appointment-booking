@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Appointments</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Booked On</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for appointment in appointments %}
+    <tr>
+      <td>{{ appointment.patient_name }}</td>
+      <td>{{ appointment.date.strftime('%Y-%m-%d') }}</td>
+      <td>{{ appointment.time.strftime('%H:%M') }}</td>
+      <td>{{ appointment.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="4">No appointments booked yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

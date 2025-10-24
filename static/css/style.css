@@ -1,0 +1,18 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.card {
+    border-radius: 12px;
+}
+.btn-primary {
+    background: linear-gradient(90deg,#4b6cb7,#182848);
+    border: none;
+}
+.btn-success {
+    background: linear-gradient(90deg,#11998e,#38ef7d);
+    border: none;
+}
